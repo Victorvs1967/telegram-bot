@@ -2,9 +2,9 @@ from config import API_TOKEN, DB_FILE
 from dblighter import DbLighter
 from parser import Parser
 
+from aiogram import Bot, Dispatcher, executor, types
 import logging
 import asyncio
-from aiogram import Bot, Dispatcher, executor, types
 
 
 """Configure logging"""
