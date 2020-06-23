@@ -52,7 +52,6 @@ async def scheduled(wait_for):
 
 				# получаем список подписчиков бота
 				subscriptions = db.get_subscriptions()
-				print(subscriptions)
 
 				# отправляем всем новость
 				with open(sg.download_image(nfo["image"]), 'rb') as photo:
