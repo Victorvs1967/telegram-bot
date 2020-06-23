@@ -9,8 +9,7 @@ class DbLighter:
 
     def get_subscriptions(self, status=True):
         with self.connection:
-            print(f'{status}')
-            return self.cursor.execute(f"SELECT * FROM `subscriptions` WHERE `status` = {status}").fetchall()
+            return self.cursor.execute(f"SELECT * FROM 'subscriptions' WHERE 'status' = {status}").fetchall()
 
     def subscriber_exist(self, user_id):
         with self.connection:
