@@ -85,8 +85,7 @@ class Parser:
         soup = BeautifulSoup(res.content, 'lxml')
 
         items = soup.select('.tiles > .items > .item > a')
-        print(items)
-        # return self.parse_href(items[0]['href'])
+        return self.parse_href(items[0]['href'])
 
     def parse_href(self, href):
         result = re.match(r'\/show\/(\d+)', href)

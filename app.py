@@ -57,7 +57,6 @@ async def scheduled(wait_for):
 				# отправляем всем новость
 				with open(sg.download_image(nfo["image"]), 'rb') as photo:
 					for s in subscriptions:
-						print(s)
 						await bot.send_photo(
 							s[1],
 							photo,
