@@ -1,1 +1,1 @@
-web: python app.py
+woker: python app.py
