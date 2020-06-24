@@ -13,7 +13,10 @@ logging.basicConfig(level=logging.INFO)
 """Initialize bot and dispatcher"""
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
-db = DbLighter(DB_FILE)
+db = DbLighter()
+
+# for SQLight
+# db = DbLighter(DB_FILE) 
 
 sg = Parser('lastkey.txt')
 
@@ -24,7 +27,7 @@ async def subscribe(message: types.Message):
         db.add_subscriber(message.from_user.id)
     else:
         db.update_subscription(message.from_user.id)
-
+	
     await message.answer('You are success subscribed!')
 
 @dp.message_handler(commands=['unsubscribe'])
