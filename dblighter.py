@@ -1,4 +1,5 @@
 import psycopg2
+
 from config import DATABASE, USER, PASSWORD, HOST, PORT
 
 class DbLighter:
