@@ -15,12 +15,7 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 db = DbLighter()
 
-# for SQLight
-# from config import DB_FILE
-# db = DbLighter(DB_FILE) 
-
 sg = Parser('lastkey.txt')
-
 
 @dp.message_handler(commands=['subscribe'])
 async def subscribe(message: types.Message):

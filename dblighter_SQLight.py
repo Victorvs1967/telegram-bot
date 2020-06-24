@@ -25,3 +25,9 @@ class DbLighter:
 
     def close(self):
         self.connection.close
+
+
+
+# app.py for SQLight
+# from config import DB_FILE
+# db = DbLighter(DB_FILE) 
