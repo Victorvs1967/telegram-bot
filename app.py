@@ -1,4 +1,4 @@
-from config import API_TOKEN, DB_FILE
+from config import API_TOKEN
 from dblighter import DbLighter
 from parser import Parser
 
@@ -16,6 +16,7 @@ dp = Dispatcher(bot)
 db = DbLighter()
 
 # for SQLight
+# from config import DB_FILE
 # db = DbLighter(DB_FILE) 
 
 sg = Parser('lastkey.txt')

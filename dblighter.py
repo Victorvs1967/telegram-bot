@@ -1,9 +1,10 @@
 import psycopg2
+from config import DATABASE, USER, PASSWORD, HOST, PORT
 
 class DbLighter:
 
     def __init__(self):
-        self.connection = psycopg2.connect(database='bot-data', user='victors', password='victor77', host='localhost', port='5432')
+        self.connection = psycopg2.connect(database=DATABASE, user=USER, password=PASSWORD, host=HOST, port=PORT)
         self.cursor = self.connection.cursor()
 
     def get_subscriptions(self, status=True):
